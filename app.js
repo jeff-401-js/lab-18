@@ -21,6 +21,13 @@ const alterFile = (file) => {
     .then(data => {
       writeFile(file, upper(data));
     })
+    .then(emit => {
+      let payload = {
+        name: 'saved',
+        data: `SAVED: event just happened!`,
+      };
+      socket.emit('file-save', JSON.stringify(payload));
+    })
     .catch(err => {
       let payload = {
         name: 'error',
@@ -70,11 +77,7 @@ function writeFile(file, text){
       if(err) { 
         reject(err);
       }else{
-        let payload = {
-          name: 'saved',
-          data: `SAVED: event just happened!`,
-        };
-        socket.emit('file-save', JSON.stringify(payload));
+        resolve();
       }
     });
   });
