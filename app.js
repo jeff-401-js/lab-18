@@ -80,20 +80,8 @@ function writeFile(file, text){
   });
 }
 
-let savedMsg = (event) => {
-  socket.emit('speak', JSON.stringify(payload));
-};
-
-function payload(event) {
-  let payload = {
-    name: event,
-    data: `A ${event} event just happened!`,
-  };
-
-  return JSON.stringify(payload);
-}
 
 let file = process.argv.slice(2).shift();
 alterFile(file);
 
-module.exports = {readFile, writeFile, upper, payload};
+module.exports = {readFile, writeFile, upper};
