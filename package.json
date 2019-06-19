@@ -20,6 +20,7 @@
   "dependencies": {
     "eslint": "^5.16.0",
     "jest": "^23.6.0",
-    "jsdoc": "^3.6.2"
+    "jsdoc": "^3.6.2",
+    "socket.io": "^2.2.0"
   }
 }
