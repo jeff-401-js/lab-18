@@ -26,7 +26,7 @@ const alterFile = (file) => {
         name: 'error',
         data: `ERROR: event just happened!`,
       };
-      socket.emit('speak', JSON.stringify(payload));
+      socket.emit('file-error', JSON.stringify(payload));
     });
 };
 
@@ -74,7 +74,7 @@ function writeFile(file, text){
           name: 'saved',
           data: `SAVED: event just happened!`,
         };
-        socket.emit('speak', JSON.stringify(payload));
+        socket.emit('file-save', JSON.stringify(payload));
       }
     });
   });
