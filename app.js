@@ -22,7 +22,11 @@ const alterFile = (file) => {
       writeFile(file, upper(data));
     })
     .catch(err => {
-      client.write(payload('error'));
+      let payload = {
+        name: 'error',
+        data: `ERROR: event just happened!`,
+      };
+      socket.emit('speak', JSON.stringify(payload));
     });
 };
 
@@ -66,11 +70,19 @@ function writeFile(file, text){
       if(err) { 
         reject(err);
       }else{
-        client.write(payload('saved'));
+        let payload = {
+          name: 'saved',
+          data: `SAVED: event just happened!`,
+        };
+        socket.emit('speak', JSON.stringify(payload));
       }
     });
   });
 }
+
+let savedMsg = (event) => {
+  socket.emit('speak', JSON.stringify(payload));
+};
 
 function payload(event) {
   let payload = {
