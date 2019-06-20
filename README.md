@@ -12,6 +12,15 @@ Jeff
 * [UML-Data-Flow](https://photos.app.goo.gl/tsR2gkkAzSeDrYXx9)
 * [JSDOCS] - not required this lab
 
+## Modules
+app.js
+  utils.js
+logger.js
+  utilsLogger.js
+server.js
+app.test.js
+fs.js
+
 ### Setup
 eslint
 jest
