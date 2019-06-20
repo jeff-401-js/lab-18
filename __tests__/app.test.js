@@ -23,3 +23,16 @@ describe('log save function', () => {
     spy.mockRestore();
   });
 });
+
+describe('log error function', () => {
+  it('should take in a message and console.error it', () => {
+    let test = {
+      name: 'error',
+      data: `ERROR: event just happened!`,
+    };
+    let spy = jest.spyOn(console, 'error');
+    logger.logError(JSON.stringify(test));
+    expect(spy).toHaveBeenCalled();
+    spy.mockRestore();
+  });
+});
