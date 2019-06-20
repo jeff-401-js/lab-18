@@ -5,17 +5,18 @@ lab-18
 Jeff
 
 ### Links and Resources
-* [submission PR](https://github.com/jeff-401-js/lab-17/pull/1)
-* [travis](https://www.travis-ci.com/jeff-401-js/lab-17)
+* [submission PR](https://github.com/jeff-401-js/lab-18/pull/1)
+* [travis](https://www.travis-ci.com/jeff-401-js/lab-18)
 
 #### Documentation
-* [UML-Data-Flow](https://photos.app.goo.gl/7NKMB8LYbjqFwka3A)
-* [JSDOCS](./docs/index.html) - drop index.html in chrome - not required this lab
+* [UML-Data-Flow](https://photos.app.goo.gl/tsR2gkkAzSeDrYXx9)
+* [JSDOCS] - not required this lab
 
 ### Setup
 eslint
 jest
 jsdoc
+socket.io
 
 #### `.env` requirements
 none
